@@ -1,0 +1,57 @@
+1. Vacunas:
+
+           variables                    constantes
+Nombre    ||  Tipo de dato  ||   Nombre   ||    Tipo de dato  ||
+
+peso      || float (decimal)||   diez     ||       entero     ||
+meses     ||     entero     ||   ocho     ||       entero     ||
+dosis     ||     float      ||
+
+dosis = ((peso +10) / (10 * meses))  + 8
+
+2. Salario
+
+           variables                    constantes
+Nombre    ||  Tipo de dato  ||   Nombre   ||    Tipo de dato  ||
+
+ValorHora ||     entero     || PorceRete  ||       float      ||
+HorasTrab ||     entero     ||            ||       entero     ||
+Retencion ||     float      ||
+salabruto ||     float      ||
+salaneto  ||     float      ||
+
+salabruto = (HorasTrab * ValorHora)         = $ 720.000
+Retencion = ((salabruto/100) * PorceRete)   = $  90.000
+salaneto  = salabruto - Retencion           = $ 630.000
+
+3. EPM
+EPM requiere de la lectura anterior en kilovatios y la lectura actual en kilovatios de un
+medidor de luz para determinar el consumo de electricidad de una vivienda. Teniendo como
+datos de entrada la lectura anterior y la lectura actual en kilovatios de un medidor, determine el
+consumo de los kilovatios y el monto a pagar por dicho consumo sabiendo que cada kilovatio
+tiene un valor de 15.000 pesos. Adicionalmente cobran el 10% del monto del consumo por
+concepto de aseo urbano, determine el monto total a pagar.
+
+           variables                    constantes
+Nombre    ||  Tipo de dato  ||   Nombre   ||    Tipo de dato  ||
+
+lecturaan ||     float      || kilovatio  ||       entero     ||
+lecturaac ||     float      || porceAseo  ||       entero     ||
+consumo   ||     float      || centima    ||       entero     ||
+valconsumo||     float      ||
+totalpago ||     float      ||
+
+# Constantes:
+kilovatio = 15000
+porceAseo = 10
+centima   = 100
+
+# Variables:
+lecturaan = 529,7
+lecturaac = 1024,6
+
+# Operaciones:
+consumo =  lecturaac - lecturaan                            = 529,7 - 1024,6        = 494,9
+valconsumo = consumo * kilovatio                            = 494,9 * 15000         = $ 74.235
+totalpago = valconsumo + ((valconsumo/centima) * porceAseo) = 74235 +(74235/100)*10 = $ 81.423,5      
+
